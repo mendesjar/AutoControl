@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { ImageBackground } from 'react-native';
+import { ViewBackground } from '../../components/viewBackground/viewBackground';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,15 +13,10 @@ const styles = StyleSheet.create({
 
 });
 
-export default function App() {
+export default function Home() {
     return (
-      <ImageBackground style={{ flex: 1}} source={
-        require('./assets/background.png')
-      }>
         <View style={styles.container}>
-          <StatusBar style="auto" />
           <Text>Essa é a home</Text>
         </View>
-      </ImageBackground>
     );
 }

@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { ImageBackground } from 'react-native';
+import { ViewBackground } from '../../components/viewBackground/viewBackground';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
 });
 
-export default function App() {
+const Automation = () => {
     return (
-      <ImageBackground style={{ flex: 1}} source={
-        require('./assets/background.png')
-      }>
-        <View style={styles.container}>
-          <StatusBar style="auto" />
-          <Text>Essa é a automatização</Text>
-        </View>
-      </ImageBackground>
+      <ViewBackground>
+        <Text>Essa é a automatização</Text>
+      </ViewBackground>
     );
 }
+
+export default Automation;

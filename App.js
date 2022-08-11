@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { ImageBackground } from 'react-native';
+import Home from './src/pages/home/homeView';
+
+import { NavigationContainer } from '@react-navigation/native'
+import Routes from './src/routes/routes';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,12 +17,9 @@ const styles = StyleSheet.create({
 
 export default function App() {
     return (
-      <ImageBackground style={{ flex: 1}} source={
-        require('./assets/background.png')
-      }>
-        <View style={styles.container}>
-          <StatusBar style="auto" />
-        </View>
-      </ImageBackground>
+      <View>
+        <Home/>
+        <StatusBar style="auto" />
+      </View>
     );
 }

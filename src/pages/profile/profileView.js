@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { ImageBackground } from 'react-native';
+import { ViewBackground } from '../../components/viewBackground/viewBackground';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,15 +12,11 @@ const styles = StyleSheet.create({
 
 });
 
-export default function App() {
+const ProfileView = () => {
     return (
-      <ImageBackground style={{ flex: 1}} source={
-        require('./assets/background.png')
-      }>
-        <View style={styles.container}>
-          <StatusBar style="auto" />
-          <Text>Esse é o perfil</Text>
-        </View>
-      </ImageBackground>
+      <ViewBackground>
+        <Text>Esse é o perfil</Text>
+      </ViewBackground>
     );
 }
+export default ProfileView;
