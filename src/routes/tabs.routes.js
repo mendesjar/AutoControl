@@ -9,7 +9,9 @@ export function TabsRoutes(){
     return(
         <Tab.Navigator
             screenOptions={{
-                headerShown: false, 
+                headerShown: false,
+                tabBarActiveTintColor: '#341',
+                tabBarInactiveTintColor: '#000',
                 tabBarStyle: {
                     showLabel: false,
                     position: 'absolute',
@@ -25,6 +27,12 @@ export function TabsRoutes(){
             <Tab.Screen 
                 name="Home" 
                 component={HomeView}
+                options={{
+                    tabBarLabel: 'Home',
+                    tabBarIcon: () => { 
+                        return <Icon name="home"/>
+                    }
+                }}
             />
             <Tab.Screen name="Profile" component={ProfileView} />
         </Tab.Navigator>
